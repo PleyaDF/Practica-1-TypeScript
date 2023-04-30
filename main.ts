@@ -3,9 +3,9 @@ import { Address } from './clases/address';
 import { Mail } from './clases/mail';
 import { Phone } from './clases/phone';
 
-function buildAgenda(): Leyda<Person> 
+function buildAgenda(): Array<Person> 
     {
-        let agenda: Leyda<Person> = [];
+        let agenda: Array<Person> = [];
 
         const addressPerson0: Address = new Address('Calle de las Delicias', 27, 2, 'A', 15770, 'Pueblo Paleta', 'Kanto');
         const person0: Person = new Person('Gary', 'Oak', 27, '27021996R', new Date(1996, 2, 27), 'Verde', 'Hombre', [addressPerson0], [new Mail('Personal', 'rojoelpeorentrenador@pokemon.com')], [new Phone('Personal', 611522433)], 'Entrenador pokemon');
@@ -23,7 +23,7 @@ function buildAgenda(): Leyda<Person>
         return agenda;
     }
 
-function showAgenda(agenda: Leyda<Person>): void 
+function showAgenda(agenda: Array<Person>): void 
     {
         for (const person of agenda) {
             console.log(person.showPersonInfo());
